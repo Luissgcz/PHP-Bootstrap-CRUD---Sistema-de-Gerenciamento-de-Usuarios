@@ -26,15 +26,13 @@ Antes de rodar o sistema, certifique-se de que o banco de dados esteja corretame
 - Dentro dele, uma tabela usuarios com as seguintes colunas:
 
   ```
-  CREATE SCHEMA IF NOT EXISTS teste;
+   CREATE SCHEMA IF NOT EXISTS teste;
 
-  USE teste;
-
-  CREATE TABLE IF NOT EXISTS usuarios (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL UNIQUE
-  );
+   CREATE TABLE IF NOT EXISTS teste.usuarios (
+   id SERIAL PRIMARY KEY,
+   nome VARCHAR(100) NOT NULL,
+   email VARCHAR(100) NOT NULL UNIQUE
+   );
   ```
 
 ## 🛠️ Como rodar
