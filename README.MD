@@ -1,11 +1,12 @@
 # 📄 Projeto CRUD com PHP & Bootstrap
 
-Um sistema simples de gerenciamento de usuários (Create, Read, Update, Delete) utilizando **PHP puro** com **Bootstrap 5** para estilização.
+Um sistema simples de gerenciamento de usuários (Create, Read, Update, Delete) utilizando **PHP** puro com **Bootstrap 5** para estilização e **PostgreSQL** como banco de dados..
 
 ## 🚀 Tecnologias
 
 - PHP
 - Bootstrap 5
+- PostgreSQL
 
 ## 📂 Estrutura do Projeto
 
@@ -16,6 +17,25 @@ Um sistema simples de gerenciamento de usuários (Create, Read, Update, Delete) 
 - `deleteUser.php` — Remove um usuário
 - `User.php` — Classe responsável pela manipulação dos dados (CRUD)
 - `ConnectionDB.php` — Classe Responsável pelas Manipulações no Banco de Dados
+
+## 📋 Requisitos do Banco de Dados
+
+Antes de rodar o sistema, certifique-se de que o banco de dados esteja corretamente configurado:
+
+- É necessário um schema no banco chamado teste.
+- Dentro dele, uma tabela usuarios com as seguintes colunas:
+
+  ```
+  CREATE SCHEMA IF NOT EXISTS teste;
+
+  USE teste;
+
+  CREATE TABLE IF NOT EXISTS usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE
+  );
+  ```
 
 ## 🛠️ Como rodar
 
